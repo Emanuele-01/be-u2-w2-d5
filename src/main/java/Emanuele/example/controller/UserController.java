@@ -34,7 +34,7 @@ public class UserController {
 	@PostMapping("")
 	@ResponseStatus(HttpStatus.CREATED)
 	public User createUser(@RequestBody User u) {
-		return us.Create(u);
+		return us.create(u);
 	};
 	
 	@GetMapping("/{:Id}")

@@ -17,9 +17,9 @@ public class UserService {
 	@Autowired
 	UserRepository repository;
 	
-	public User Create(User u) {
-		User newU = new User(u.getName(), u.getLastName(), u.getEmail(), u.getUserName(), u.getPassword());
-		return repository.save(newU);
+	public User create(User u) {
+		//User newU = new User(u.getName(), u.getLastName(), u.getEmail(), u.getUserName(), u.getPassword());
+		return repository.save(u);
 	}; 
 	
 	
@@ -33,9 +33,9 @@ public class UserService {
 	}
 	
 	
-	public User findEmail(String email) throws Exception{
-		return repository.findEmail(email).orElseThrow(() -> new Exception("utente no  trovato"));
-	};
+//	public User findEmail(String email) throws Exception{
+//		return repository.findEmail(email).orElseThrow(() -> new Exception("utente no  trovato"));
+//	};
 	
 	public User findId (UUID id) throws Exception{
 		return repository.findById(id).orElseThrow(() -> new Exception("utente non trovato"));

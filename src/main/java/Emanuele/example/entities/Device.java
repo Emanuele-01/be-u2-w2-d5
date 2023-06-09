@@ -3,6 +3,8 @@ package Emanuele.example.entities;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -19,7 +21,11 @@ public class Device {
 	@GeneratedValue
 	private UUID id;
 	
+	@Enumerated(EnumType.STRING)
 	private TypeDevice typeDevice;
+	
+	
+	@Enumerated(EnumType.STRING)
 	private StateDevice stateDevice;
 	
 	

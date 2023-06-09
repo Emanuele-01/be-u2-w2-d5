@@ -10,5 +10,5 @@ import Emanuele.example.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
-	Optional<User> findEmail(String email);
+	//Optional<User> findEmail(String email);
 }
