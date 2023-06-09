@@ -10,7 +10,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import Emanuele.example.entities.Device;
-import Emanuele.example.entities.User;
 import Emanuele.example.repositories.DeviceRepository;
 
 @Service
@@ -45,5 +44,10 @@ public class DeviceService {
 		f.setStateDevice(device.getStateDevice());
 		
 		return repository.save(f);
+	}
+	
+	public void findAndDelete(UUID id) throws Exception {
+		Device f = this.findId(id);
+		repository.delete(f);
 	}
 }

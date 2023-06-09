@@ -52,4 +52,9 @@ public class UserService {
 		
 		return repository.save(f);
 	}
+	
+	public void findAndDelete(UUID id) throws Exception {
+		User f = this.findId(id);
+		repository.delete(f);
+	}
 }
